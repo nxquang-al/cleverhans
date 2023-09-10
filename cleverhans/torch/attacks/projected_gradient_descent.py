@@ -120,7 +120,7 @@ def projected_gradient_descent(
 
     i = 0
     while i < nb_iter:
-        adv_x = fast_gradient_method(
+        adv_x, _ = fast_gradient_method(
             model_fn,
             adv_x,
             eps_iter,
@@ -150,4 +150,4 @@ def projected_gradient_descent(
 
     if sanity_checks:
         assert np.all(asserts)
-    return adv_x
+    return adv_x, eta

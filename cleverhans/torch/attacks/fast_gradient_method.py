@@ -100,4 +100,4 @@ def fast_gradient_method(
 
     if sanity_checks:
         assert np.all(asserts)
-    return adv_x
+    return adv_x, optimal_perturbation

@@ -165,7 +165,7 @@ def spsa(
     if sanity_checks:
         assert np.all(asserts)
 
-    return adv_x
+    return adv_x, perturbation
 
 
 def _project_perturbation(
